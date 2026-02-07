@@ -1,0 +1,36 @@
+# Binaries
+build/
+*.exe
+vpn-server
+vpn-client
+
+# Configuration files with secrets
+server.yaml
+client.yaml
+*.key
+*.crt
+*.pem
+
+# Certificates directory
+certs/
+
+# Go
+go.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage.out
+coverage.html
+
+# Logs
+*.log

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go mod tidy:*)",
+      "Bash(go test:*)",
+      "Bash(go build:*)",
+      "Bash(set:*)",
+      "Bash($env:GOOS='linux')",
+      "Bash($env:GOARCH='amd64')"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+# WS-VPN Server Configuration
+
+server:
+  # Address and port to listen on
+  listen_addr: "0.0.0.0:443"
+
+  # TLS certificate and key paths
+  # Generate self-signed cert for testing:
+  #   openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -days 365 -nodes -subj "/CN=vpn-server"
+  tls_cert: "/etc/vpn/server.crt"
+  tls_key: "/etc/vpn/server.key"
+
+vpn:
+  # VPN subnet in CIDR notation
+  subnet: "10.100.0.0/24"
+
+  # Server's IP within the VPN subnet
+  server_ip: "10.100.0.1"
+
+  # MTU for the VPN tunnel (1420 accounts for WebSocket overhead)
+  mtu: 1420
+
+  # TUN interface name
+  interface_name: "tun0"
+
+auth:
+  # List of valid authentication tokens
+  # In production, use strong, randomly generated tokens
+  tokens:
+    - "your-secret-token-1"
+    - "your-secret-token-2"
+
+logging:
+  # Log level: debug, info, warn, error
+  level: "info"

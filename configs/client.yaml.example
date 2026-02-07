@@ -1,0 +1,32 @@
+# WS-VPN Client Configuration
+
+server:
+  # WebSocket URL of the VPN server
+  # Must include the /vpn path
+  url: "wss://your-server-ip:443/vpn"
+
+  # Whether to verify the server's TLS certificate
+  # Set to false for self-signed certificates (testing only!)
+  verify_tls: false
+
+auth:
+  # Authentication token (must match one of the server's tokens)
+  token: "your-secret-token-1"
+
+vpn:
+  # Name for the TUN interface on Windows
+  interface_name: "WS-VPN"
+
+  # MTU (should match server configuration)
+  mtu: 1420
+
+reconnect:
+  # Minimum time to wait before reconnecting after disconnect
+  min_backoff: "1s"
+
+  # Maximum time to wait before reconnecting (exponential backoff caps here)
+  max_backoff: "60s"
+
+logging:
+  # Log level: debug, info, warn, error
+  level: "info"
