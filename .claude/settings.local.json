@@ -6,7 +6,15 @@
       "Bash(go build:*)",
       "Bash(set:*)",
       "Bash($env:GOOS='linux')",
-      "Bash($env:GOARCH='amd64')"
+      "Bash($env:GOARCH='amd64')",
+      "Bash(go get:*)",
+      "Bash(gcc:*)",
+      "Bash(\"C:\\\\Program Files\\\\Go\\\\pkg\\\\tool\\\\windows_amd64\\\\cgo.exe\")",
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(go install:*)",
+      "Bash(rsrc:*)",
+      "Bash(dir:*)"
     ]
   }
 }
